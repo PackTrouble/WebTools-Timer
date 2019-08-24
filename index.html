@@ -6,10 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tools - Online Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
+    <div id="setting-panel">
+        <i class="fa fa-cog " id="settings">
+            <div id="panel">
+
+                <table id="setting-options">
+                    <tr>
+                        <td>Background</td>
+                        <td><input type="text" name="background-option" id="background-option" placeholder="#ColorHex">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Count Down</td>
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox" name="count-direction" id="count-direction">
+                                <span class="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Audio Feedback</td>
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox" name="count-direction" id="count-direction">
+                                <span class="slider round"></span>
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </i>
+    </div>
     <div id="clock">
         <h1 id="day-header">Days</h1>
         <div id="days" class="clock-items"></div>
@@ -24,5 +59,6 @@
 
 </body>
 <script src="./js/timer.js"></script>
+<script src="./js/settings.js"></script>
 
 </html>
