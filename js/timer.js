@@ -10,22 +10,27 @@ document.getElementById("hours").innerHTML = "<p>0" + time[1] + "</p>";
 document.getElementById("days").innerHTML = "<p>0" + time[0] + "</p>";
 
 
+var lastClick = 0;
 document.getElementById("start-stop-btn").addEventListener('click', function () {
 
     document.getElementById("start-stop-btn").classList.toggle("start");
     document.getElementById("start-stop-btn").classList.toggle("stop");
-
-    if (counter == 0) {
-        document.getElementById("start-stop-btn").innerText = "Stop";
-        running = true;
-        timer(running);
-        counter = 1;
-    } else if (counter == 1) {
-        document.getElementById("start-stop-btn").innerText = "Start";
-        running = false;
-        counter = 0;
+    if (Date.now() - lastClick > 1000) {
+        if (counter == 0) {
+            document.getElementById("start-stop-btn").innerText = "Stop";
+            running = true;
+            timer(running);
+            counter = 1;
+        } else if (counter == 1) {
+            document.getElementById("start-stop-btn").innerText = "Start";
+            running = false;
+            counter = 0;
+        }
+        lastClick = Date.now();
     }
+
 })
+
 
 function timer(runnning) {
     if (running) {
