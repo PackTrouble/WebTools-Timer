@@ -50,8 +50,7 @@ text-align: center;
     grid-area: s;
 }
 .clock-items{
-    background:black;
- /* width:105px; */
+    background:#01010c;
     margin: 2px;
 }
 .clock-items p{
