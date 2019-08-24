@@ -1,19 +1,21 @@
 body{
     background:#030419;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin:0;
 }
 #clock{
     padding:10px;
     border-radius: 25px;
     display:grid;
-    grid-template: 1fr 1fr/  1fr 1fr  1fr 1fr;
+    grid-template: 100px 1fr/  1fr 1fr  1fr 1fr;
     grid-template-areas: 
             'd h m s' 
             'day hour minute second';
-    height: 200px;
+    /* height: 200px; */
     
 }
 #clock h1{
@@ -61,10 +63,23 @@ text-align: center;
     text-align: center;
 
 }
-
+ #start-stop-btn:active {
+   box-shadow: 0 5px rgb(17, 7, 58);
+    transform: translateY(4px);
+  }
 #start-stop-btn{
    
-
+padding:20px;
+margin-top:10px;
+width:100px;
+height: 50px;
+font-size: 40px;
+text-align: center;
+cursor: pointer;
+outline: none;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px rgb(17, 7, 58);
 }
 .start{
     background:green;

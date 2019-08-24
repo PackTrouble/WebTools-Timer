@@ -2,6 +2,8 @@ var time = [00, 00, 00, 00]
 var setTime = [0, 0, 0, 0]
 var running = true;
 var counter = 0;
+
+//initalizes and displays the counter
 document.getElementById("seconds").innerHTML = "<p>0" + time[3] + "</p>";
 document.getElementById("minutes").innerHTML = "<p>0" + time[2] + "</p>";
 document.getElementById("hours").innerHTML = "<p>0" + time[1] + "</p>";
@@ -21,7 +23,6 @@ document.getElementById("start-stop-btn").addEventListener('click', function () 
     } else if (counter == 1) {
         document.getElementById("start-stop-btn").innerText = "Start";
         running = false;
-        timer(running);
         counter = 0;
     }
 })
@@ -100,7 +101,14 @@ function timer(runnning) {
         reset();
     }
 }
+//resets times after the stop button is clicked
+
 function reset() {
     time = [0, 0, 0, 0]
-    console.log("reset called")
+    //update after reset
+    document.getElementById("seconds").innerHTML = "<p>0" + time[3] + "</p>";
+    document.getElementById("minutes").innerHTML = "<p>0" + time[2] + "</p>";
+    document.getElementById("hours").innerHTML = "<p>0" + time[1] + "</p>";
+    document.getElementById("days").innerHTML = "<p>0" + time[0] + "</p>";
+
 }
