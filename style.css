@@ -1,0 +1,76 @@
+body{
+    background:#030419;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#clock{
+    padding:10px;
+    border-radius: 25px;
+    display:grid;
+    grid-template: 1fr 1fr/  1fr 1fr  1fr 1fr;
+    grid-template-areas: 
+            'd h m s' 
+            'day hour minute second';
+    height: 200px;
+    
+}
+#clock h1{
+text-align: center;  
+  width:100%;
+    color:white;
+}
+#days{
+    grid-area: day;
+}
+#day-header{
+    grid: d;
+}
+#hours{    
+    grid-area: hour;
+}
+#hour-header{
+    grid-area: h;
+}
+#minutes{
+    grid-area: minute;
+
+}
+#minute-header{
+    grid-area: m;
+}
+#seconds{
+    grid-area: second;
+
+}
+#second-header{
+    grid-area: s;
+}
+.clock-items{
+    background:black;
+ /* width:105px; */
+    margin: 2px;
+}
+.clock-items p{
+    font-size: 50px;
+    color:white;
+    padding:50px;
+    margin:0;
+    height: 100%;
+    text-align: center;
+
+}
+
+#start-stop-btn{
+   
+
+}
+.start{
+    background:green;
+    padding:10px;
+}
+.stop{
+    background:red;
+    padding:10px;
+}
